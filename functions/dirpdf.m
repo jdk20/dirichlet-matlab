@@ -72,23 +72,3 @@ y(i2) = exp(-(sum(gammaln(a(i2, :)), 2) - gammaln(sum(a(i2, :), 2))) + ...
 i3 = ~i0 & ~i1 & ~i2;
 y(i3) = exp(-(sum(gammaln(a(i3, :)), 2) - gammaln(sum(a(i3, :), 2))) + ...
         sum((a(i3, :) - 1).*log(x(i3, :)), 2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
