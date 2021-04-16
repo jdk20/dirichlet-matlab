@@ -1,16 +1,16 @@
 function y = dirpdf(x,a)
 %DIRPDF Dirichlet probability density function (pdf).
 %   Y = DIRPDF(X,A) returns the pdf for the Dirichlet distribution with the
-%   concentration parameter A, evaluated at each row of X. X and A are M-by-K
+%   hyperparameter A, evaluated at each row of X. X and A are M-by-K
 %   matrices or 1-by-K vectors, where K is the dimensionality of the of the
 %   Dirichlet distribution. Each row of X must sum to one, with 0 <= X <= 1,
-%   and concentration parameter A > 0. Y is a M-by-1 vector, and DIRPDF computes
+%   and hyperparameter A > 0. Y is a M-by-1 vector, and DIRPDF computes
 %   each row of Y using the corresponding row of the inputs, or replicates them
 %   if needed.
 %
 %   Example:
-%    Generate 10 random vectors with concentration parameter A and compute the 
-%    Dirichlet pdf of X with the same concentration parameter A
+%    Generate 10 random vectors with hyperparameter A and compute the 
+%    Dirichlet pdf of X with the same hyperparameter A
 %    A = [2, 3, 4];
 %    X = dirrnd(A, 10);
 %    Y = dirpdf(X, A);

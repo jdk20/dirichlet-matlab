@@ -1,16 +1,16 @@
 function r = dirrnd(a,varargin)
 %DIRRND Random vectors from Dirichlet distribution.
 %   R = DIRRND(A) returns a random vector chosen from the Dirichlet 
-%   distribution with a 1-by-K vector of concentration parameter A, where K is
+%   distribution with a 1-by-K vector of hyperparameter A, where K is
 %   the dimensionality of the pdf. R is a 1-by-K vector. If A < 0, R is a 
 %   1-by-K vector of NaN values.
 %
 %   R = DIRRND(A,M) returns M random vectors chosen from the Dirichlet 
-%   distribution with concentration parameter A. R is a M-by-K matrix. Each
+%   distribution with hyperparameter A. R is a M-by-K matrix. Each
 %   row of R corresponds to one random vector.
 %
 %   Example:
-%    Generate 10 random vectors with concentration parameter A
+%    Generate 10 random vectors with hyperparameter A
 %    A=[2,3,4];
 %    X=dirrnd(A,10);
 %
@@ -26,7 +26,7 @@ function r = dirrnd(a,varargin)
 narginchk(1, 2);
 
 if ~isvector(a)
-    error('Concentration parameters must be a vector.');
+    error('Hyperparameters must be a vector.');
 end
 
 if iscolumn(a)

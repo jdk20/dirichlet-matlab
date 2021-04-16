@@ -1,7 +1,7 @@
 function [m,v] = dirstat(a)
 %DIRSTAT Mean and variance for the Dirichlet distribution.
 %   [M,V] = DIRSTAT(A) returns the mean and variance of the Dirichlet 
-%   distribution with concentration parameter A. M and V are 1-by-K vectors
+%   distribution with hyperparameter A. M and V are 1-by-K vectors
 %   where K is the dimensionality of the Dirichlet distribution.
 %
 %   See also DIRPDF, DIRRND.
@@ -13,7 +13,7 @@ function [m,v] = dirstat(a)
 narginchk(1, 1);
 
 if ~isvector(a)
-    error('Concentration parameters must be a vector.');
+    error('Hyperparameter must be a vector.');
 end
 
 if iscolumn(a)
