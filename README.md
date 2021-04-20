@@ -46,6 +46,5 @@ xlim([0, 1]); ylim([0, 1]); zlim([0, 1]);
 set(gca, 'XTick', 0:0.2:1, 'YTick', 0:0.2:1, 'ZTick', 0:0.2:1, ...
    'YDir', 'reverse', 'XDir', 'reverse');
 title('a = [10, 10, 10]');
-xlabel('q_1'); ylabel('q_2'); zlabel('q_3');
 ```
 ![Random vectors from various Dirichlet distributions.](images/figure-random-vectors.png)
