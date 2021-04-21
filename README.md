@@ -27,12 +27,20 @@ Y =
    5.091775747161138
    2.914848702465950
    
-[M,V] = dirstat(A); % Mean and variance for each dimension
+[M,MO,V,CV] = dirstat(A) % Mean, mode, variance, and covariance for each dimension
 M =
    0.222222222222222   0.333333333333333   0.444444444444444
+MO =
+   0.166666666666667   0.333333333333333   0.500000000000000
 V =
    0.017283950617284   0.022222222222222   0.024691358024691
+CV =
+
+   0.017283950617284  -0.007407407407407  -0.009876543209877
+  -0.007407407407407   0.022222222222222  -0.014814814814815
+  -0.009876543209877  -0.014814814814815   0.024691358024691
 ```
+
 ## Random vectors from various (symmetric) Dirichlet distributions
 ```matlab
 a = [10, 10, 10]; % Symmetric Dirichlet hyperparameters
