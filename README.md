@@ -7,7 +7,7 @@ You can add the dirichlet-matlab directory to your MATLAB search path:
 addpath(genpath('dirichlet-matlab'))  
 ```
 
-## Example
+## Dirichlet distribution example
 ```matlab
 A = [2, 3, 4]; % Dirichlet hyperparameters (shape vector) for a 3-dimensional distribution
 
@@ -55,3 +55,27 @@ set(gca, 'XTick', 0:0.2:1, 'YTick', 0:0.2:1, 'ZTick', 0:0.2:1, ...
 title('a = [10, 10, 10]');
 ```
 ![Random vectors from various Dirichlet distributions.](images/figure-random-vectors.png)
+
+## Dirichlet-multinomial distribution example
+```matlab
+A = [2, 3, 4]; % Dirichlet-multinomial hyperparameters (shape vector) for a 3-dimensional distribution
+N = 10; % Number of trials
+
+X = dirmnrnd(A, N, 5); % Generate 5 random vectors
+X =
+     4     1     5
+     6     1     3
+     0     0    10
+     5     2     3
+     1     8     1
+   
+[M,V,CV] = dirmnstat(A, N) % Mean, variance, and covariance for each dimension
+M =
+   2.222222222222222   3.333333333333333   4.444444444444445
+V =
+   3.283950617283951   4.222222222222222   4.691358024691358
+CV =
+   3.283950617283951  -1.407407407407407  -1.876543209876543
+  -1.407407407407407   4.222222222222222  -2.814814814814814
+  -1.876543209876543  -2.814814814814814   4.691358024691358
+```
