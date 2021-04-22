@@ -45,4 +45,6 @@ if any(a <= 0)
 else
     g = randg(repmat(a, [m, 1]));
     r = exp(log(g) - log(sum(g, 2)));
+    
+    r = r./sum(r,2);
 end
