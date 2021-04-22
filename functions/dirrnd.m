@@ -1,5 +1,5 @@
 function r = dirrnd(a,varargin)
-%DIRRND Random vectors from Dirichlet distribution.
+%DIRRND Random vectors from a Dirichlet distribution.
 %   R = DIRRND(A) returns a random vector chosen from the Dirichlet 
 %   distribution with a 1-by-K vector of hyperparameter A, where K is
 %   the dimensionality of the pdf. R is a 1-by-K vector. If A < 0, R is a 
@@ -12,7 +12,7 @@ function r = dirrnd(a,varargin)
 %   Example:
 %    Generate 10 random vectors with hyperparameter A
 %    A=[2,3,4];
-%    X=dirrnd(A,10);
+%    R=dirrnd(A,10);
 %
 %   See also DIRPDF, DIRSTAT.
 
