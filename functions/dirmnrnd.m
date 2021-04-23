@@ -1,4 +1,4 @@
-function r = dirmnrnd(a,n,varargin)
+function [r,prob] = dirmnrnd(a,n,varargin)
 %DIRRND Random vectors from a Dirichlet-multinomial distribution.
 %   R = DIRMNRND(A,N) returns a random vector chosen from the 
 %   Dirichlet-multinomial distribution with a 1-by-K vector of hyperparameters 
@@ -9,6 +9,9 @@ function r = dirmnrnd(a,n,varargin)
 %   R = DIRMNRND(A,N,M) returns M random vectors chosen from the 
 %   Dirichlet-multinomial distribution with hyperparameters A and N. R is a 
 %   M-by-K matrix. Each row of R corresponds to one random vector.
+%
+%   [R,PROB] = DIRMNRND(A,N) returns the probabilities sampled from the 
+%   Dirichlet distribution.
 %
 %   Example:
 %    Generate 10 random vectors with hyperparameters A and N
@@ -45,7 +48,8 @@ end
 
 if any(a <= 0) || any(n <= 0) || any(n ~= floor(n))
     r = NaN(m, size(a, 2));
+    prob = NaN(m, size(a, 2));
 else
-    p = dirrnd(a, m);
-    r = mnrnd(n, p, m);
+    prob = dirrnd(a, m);
+    r = mnrnd(n, prob, m);
 end
