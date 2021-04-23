@@ -16,7 +16,7 @@ function r = dirmnrnd(a,n,varargin)
 %    N=20;
 %    R=dirmnrnd(A,N,10);
 %
-%   See also DIRMNPDF, DIRMNSTAT.
+%   See also DIRMNPMF, DIRMNSTAT.
 
 %   References:
 %      [1] B. Frigyik, et. al., "Introduction to the Dirichlet Distribution and 

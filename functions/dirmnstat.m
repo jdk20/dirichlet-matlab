@@ -7,7 +7,7 @@ function [m,v,cv] = dirmnstat(a,n)
 %   Dirichlet-multinomial distribution. CV is a K-by-K matrix where the 
 %   diagonal is the variance of A.
 %
-%   See also DIRMNPDF, DIRMNRND.
+%   See also DIRMNPMF, DIRMNRND.
     
 %   References:
 %      [1] A. Gelman, et. al., "Bayesian Data Analysis", CRC Press, 2013
