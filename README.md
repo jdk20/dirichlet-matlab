@@ -87,3 +87,25 @@ CV =
   -1.407407407407407   4.222222222222222  -2.814814814814814
   -1.876543209876543  -2.814814814814814   4.691358024691358
 ```
+
+## Dirichlet process example
+```matlab
+A = 5; % Shape parameter
+N = 10; % Number of iterations
+
+X = dirproc(A,N); Samples from a Dirhlet process over the sequence of natural numbers
+X =
+     1
+     2
+     1
+     1
+     3
+     4
+     5
+     1
+     2
+     2
+```
+
+## Sampled Dirichlet process trajectories
+![Sampled Dirichlet process trajectories.](images/figure-dirichlet-process.png)
