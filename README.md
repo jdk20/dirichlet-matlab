@@ -1,5 +1,8 @@
 # dirichlet-matlab
-MATLAB functions to generate random vectors from a Dirichlet distribution or to calculate the pdf from a Dirichlet distribution with given hyperparameters (A).
+MATLAB functions for working with the Dirichlet and other related distributions.
+- **Dirichlet distribution:** `dirrnd`,`dirpdf`,`dirstat`
+- **Dirichlet-multinomial distribution:** `dirmnrnd`,`dirmnpdf`,`dirmnstat`
+- **Dirichlet process:** `dirproc`
 
 ## Installation
 You can add the dirichlet-matlab directory to your MATLAB search path:
