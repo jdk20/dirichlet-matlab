@@ -96,7 +96,7 @@ CV =
 A = 5; % Shape parameter
 N = 10; % Number of iterations
 
-X = dirproc(A,N); Samples from a Dirhlet process over the sequence of natural numbers
+X = dirproc(A,N); % Samples from a Dirhlet process over the sequence of natural numbers
 X =
      1
      2
